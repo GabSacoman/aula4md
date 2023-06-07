@@ -1,8 +1,6 @@
-from django.db import models
+from django.test import TestCase
+from lists.models import Item, List
 
-class List(models.Model):
-    pass
-
-class Item(models.Model):
+class ListAndItemModelsTest(TestCase):
     text = models.TextField(default='')
     list = models.ForeignKey(List, default=None)
